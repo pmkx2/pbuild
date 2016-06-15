@@ -4,7 +4,7 @@
  * @author pmkx2 (185832959@qq.com)
  */
 define('idc/data', ['storage'], function(Storage){
-
+ 
     //数据集
     var IdcData = function( config ){
         this.config = $.extend({

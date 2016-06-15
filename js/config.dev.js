@@ -1,15 +1,19 @@
 require.config({
-	"baseUrl": "./js",
+//$.amd().config({
+	"baseUrl": "../js",
     "paths": {
-        "jquery"			: "vendor/jquery/1.8.3/jquery.min",
-        "require"			: "vendor/require/require",
+        "require"           : "vendor/require/require",
+        "jquery/1.8.3"		: "vendor/jquery/1.8.3/jquery.min",
         "bootstrap"			: "vendor/bootstrap/bootstrap.min",
         "config"			: "config"
     },
 
     "shim": {
-        "bootstrap"  : ["jquery"],
-        "lazyload"   : ["jquery"],
-        "superSlide" : ["jquery"]
-    }
+        "bootstrap"  : ["jquery"]
+    },
+
+    "hash": {
+        "jquery":"d32fer"
+    },
+    "packages": []
 });

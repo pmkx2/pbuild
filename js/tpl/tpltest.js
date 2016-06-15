@@ -1,0 +1,1 @@
+define('tpl/tpltest', [], function(){return {"test.html":"<div><p>测试输出文件2</p></div>","test2.html":"<div><p>测试输出文件2</p></div>"};});
