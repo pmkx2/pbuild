@@ -19,10 +19,7 @@ require.config({
 "bootstrap":"4becdc",
 "jquery/1.8.3":"3576a6",
 "jquery/2.1.4":"b0dc11",
-"require":"6bd2f8",
-"require_bak":"6bd2f8",
-"require_dev":"e1484b",
-"require_og":"e1484b"
+"require":"e1484b"
 },
 		    "packages": []
 		});
