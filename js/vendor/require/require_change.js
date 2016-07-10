@@ -1628,9 +1628,17 @@ var requirejs, require, define;
                     url = (url.charAt(0) === '/' || url.match(/^[\w\+\.\-]+:/) ? '' : config.baseUrl) + url;
                 }
 
+                /*
+                //原有返回方法
                 return config.urlArgs ? url +
                                         ((url.indexOf('?') === -1 ? '?' : '&') +
                                          config.urlArgs) : url;
+                */
+                //修改返回方法
+                config.hash = config['hash'] || {};
+                return config.hash[moduleName] ? url +
+                                        ((url.indexOf('?') === -1 ? '?' : '&') +
+                                         config.hash[moduleName]) : url;
             },
 
             //Delegates to req.load. Broken out as a separate function to
