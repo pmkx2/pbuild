@@ -1,17 +1,16 @@
-@font-face
-{
-    font-family: "_font_icon" !important;
-    src: url('@{base-url}fonts/_font_icon.eot');
-    src: url('@{base-url}fonts/_font_icon.eot?#iefix') format('eot'), 
-        url('@{base-url}fonts/_font_icon.woff') format('woff'), 
-        url('@{base-url}fonts/_font_icon.ttf') format('truetype'), 
-        url('@{base-url}fonts/_font_icon.svg#_font_icon') format('svg');
+@font-face {
+    font-family: '_font_icon' !important;
+    src: url('@{base-url}fonts/test/iconfont.eot');
+    src: url('@{base-url}fonts/test/iconfont.eot?#iefix') format('eot'), 
+        url('@{base-url}fonts/test/iconfont.woff') format('woff'), 
+        url('@{base-url}fonts/test/iconfont.ttf') format('truetype'), 
+        url('@{base-url}fonts/test/iconfont.svg#iconfont') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="ficon"], [class*="ficon"]
-{
+//通配类型
+[class^="ficon"], [class*="ficon"] {
     font-family: "_font_icon" !important;
     speak: none;
     font-style: normal;
@@ -22,9 +21,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+//字体倍数
 .ficon-2x { font-size: 2em; }
 .ficon-3x { font-size: 3em; }
 .ficon-4x { font-size: 4em; }
 .ficon-5x { font-size: 5em; }
+
 //字体定义
 .ficon-android:before { content: "\E001" }

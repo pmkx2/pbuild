@@ -20,8 +20,8 @@ require.config({
 "bootstrap":"4becdc",
 "require":"e1484b",
 "jquery/1.8.3":"3576a6",
-"jquery/2.1.4":"b0dc11",
-"jquery":"c07f22" 
+"jquery":"c07f22",
+"jquery/2.1.4":"b0dc11"
 },
 		    "packages": []
 		});
