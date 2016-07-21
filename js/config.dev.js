@@ -18,6 +18,7 @@ require.config({
 "bootstrap":"jquery"
 },
 		    "hash": {
+<<<<<<< Updated upstream
 "tpl/tpltest":"439aac",
 "jstest/idc":"8d6724",
 "jstest/packageon":"384a49",
@@ -30,6 +31,9 @@ require.config({
 "jquery/1.8.3":"3576a6",
 "require":"e1484b",
 "jquery":"c07f22"
+=======
+
+>>>>>>> Stashed changes
 },
 		    "packages": []
 		});
