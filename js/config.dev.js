@@ -23,11 +23,11 @@ require.config({
 "jstest/idc":"8d6724",
 "jstest/packageon":"384a49",
 "jstest2/data":"bd9999",
-"jstest2/idc":"a61ed7",
 "jstest2/packageon":"8dc33e",
+"jstest2/idc":"a61ed7",
 "bootstrap":"4becdc",
-"jquery/1.8.3":"3576a6",
 "jquery/2.1.4":"b0dc11",
+"jquery/1.8.3":"3576a6",
 "require":"e1484b",
 "jquery":"c07f22"
 },
