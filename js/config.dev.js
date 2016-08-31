@@ -13,7 +13,8 @@ require.config({
 "jquery/2.1.4":"vendor/jquery/2.1.4/jquery.min",
 "jquery":"vendor/jquery/jquery",
 "require/og":"vendor/require/og/require_og",
-"require":"vendor/require/require"
+"require":"vendor/require/require",
+"rivets":"vendor/rivets/rivets.bundled.min"
 },
 		    "shim": {
 "bootstrap":"jquery"
@@ -22,16 +23,17 @@ require.config({
 "tpl/tpltest":"439aac",
 "jstest/data":"bd9999",
 "jstest/idc":"8d6724",
+"jstest/packageon":"384a49",
 "jstest2/data":"bd9999",
 "jstest2/idc":"a61ed7",
-"jstest/packageon":"384a49",
 "jstest2/packageon":"8dc33e",
 "bootstrap":"4becdc",
 "jquery/1.8.3":"3576a6",
-"require/og":"e1484b",
-"jquery":"c07f22",
 "jquery/2.1.4":"b0dc11",
-"require":"9b4838"
+"require/og":"061368",
+"jquery":"c07f22",
+"require":"9b4838",
+"rivets":"0341cd"
 },
 		    "packages": []
 		});

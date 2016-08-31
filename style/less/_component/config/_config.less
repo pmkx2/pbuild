@@ -1,5 +1,5 @@
 /*
---- _config.less ---
+--- x-ui.less ---
 */
 
 //全局的配置文件，如颜色定义
@@ -7,14 +7,39 @@
 //静态文件所在目录
 @base-url: "../../";
 
+//-- 构成元素 --------------------------------------------------
+//基础色
+@bc-white: 			#fff;		//白
+@bc-grey-light: 	#f1f1f1;	//浅灰
+@bc-grey: 			#ddd;		//灰
+@bc-grey-dark-sub: 	#d7d7d7;	//深灰(浅)
+@bc-grey-dark: 		#b7b7b7;	//深灰
+@bc-grey-dark2: 	#989fa9;	//深灰2
+@bc-black-light: 	#434a54;	//浅黑
+@bc-black: 			#22262c;	//黑
+@bc-blue: 			#3bafda;	//蓝
+@bc-blue-light: 	#4fc1e9;	//浅蓝
+@bc-green: 			#95be3e;	//绿
+@bc-red: 			#ff6666;	//红
+
+//基础字体大小
+@f12px: 12px;	//12px
+@f14px: 14px;	//14px
+@f16px: 16px;	//16px
+@f18px: 18px;	//18px
+@f20px: 20px;	//20px
+
+
+//-- 基础元素 --------------------------------------------------
 //背景色
-@bgc-white: 		#fff;		//白色
-@bgc-light-grey: 	#f1f1f1;	//灰色（浅灰）
+@bgc-white: 		@bc-white;			//白色
+@bgc-grey-light: 	@bc-grey-light;		//灰色（浅灰）
 
 //边框色
-@brc-light-grey: 	#ddd;		//灰色（浅灰）
-@brc-grey: 			#d7d7d7;	//灰色（中灰）
+@brc-grey-light: 	@bc-grey-light;		//浅灰
+@brc-grey: 			@bc-grey;			//灰色
 
+//
 
 
 //色彩规范
