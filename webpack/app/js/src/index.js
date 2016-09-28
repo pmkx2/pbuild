@@ -1,10 +1,20 @@
-
 exports.app = function($main) {
-    var AppMd = function(){
-        return 'Hello!';
+
+	require('../../style/scss/_reset.scss');
+
+    var AppMd = function( $main ){
+    	this.$main = $main;
+        this.x = 'Hello!';
     };
 
-    var app = new AppMd($main);
+    AppMd.prototype.showName = function() {
+    	var self = this;
+    	self.$main.text(self.x);
+    };
 
-    return app;
+    return new AppMd($main);
 };
+
+
+var app = this.app($('#Main'));
+app.showName();

@@ -44,20 +44,46 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	exports.app = function($main) {
+
+		__webpack_require__(1);
+
+	    var AppMd = function( $main ){
+	    	this.$main = $main;
+	        this.x = 'Hello!';
+	    };
+
+	    AppMd.prototype.showName = function() {
+	    	var self = this;
+	    	self.$main.text(self.x);
+	    };
+
+	    return new AppMd($main);
+	};
+
+
+	var app = this.app($('#Main'));
+	app.showName();
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?sourceMap!./index.sass\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var content = __webpack_require__(2);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(2)(content, {});
+	var update = __webpack_require__(4)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?sourceMap!./index.sass", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?sourceMap!./index.sass");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?sourceMap!./_reset.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js?sourceMap!./_reset.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -67,8 +93,77 @@
 	}
 
 /***/ },
-/* 1 */,
 /* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@charset \"UTF-8\";\n/**\n--- _reset.less ---\n重置样式\n*/\nhtml, body, div, dl, dt, dd, ul, ol, li, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {\n  margin: 0;\n  padding: 0; }\n\nheader, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {\n  display: block; }\n\nh1, h2, h3, h4, h5, h6, small, strong, b {\n  font-size: 100%;\n  font-weight: bold; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ncaption, th {\n  text-align: left;\n  font-weight: normal; }\n\nhtml, body, fieldset, img, iframe, abbr {\n  border: 0; }\n\ni, cite, em, var, address, dfn {\n  font-style: normal; }\n\npre, code, kbd, samp {\n  font-family: inherit; }\n\nq:before, q:after {\n  content: none; }\n\ntextarea {\n  overflow: auto;\n  resize: none; }\n\nlabel, summary {\n  cursor: default; }\n\nli {\n  list-style: none; }\n\na, button {\n  cursor: pointer; }\n\ndel, ins, a {\n  text-decoration: none; }\n\ninput, button, select, textarea, a {\n  outline: none; }\n\na:hover {\n  text-decoration: underline; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

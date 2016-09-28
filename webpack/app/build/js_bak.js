@@ -6,35 +6,31 @@
 "use strict";
 
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     //页面入口文件
     entry: {
-        app: path.join(__dirname, '../style/scss/index.sass')
+        app: path.join(__dirname, '../js/src/index.js')
     },
     //输出路径
     output: {
         path: path.join(__dirname, '../dist'),
-        filename: '[name].css'
+        filename: '[name].js',
+        chunkFilename: '[name].js'
     },
     //加载器
     module: {
         loaders: [
-            //{ test: /\.css$/, loader: 'style-loader!css-loader' },
-            //{ test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
-            { test: /\.scss$/, loader: ExtractTextPlugin.extract('style','css!sass!scss') }
+            { js: /\.js$/, loader: 'jsx-loader?harmony' },
         ]
     },
     //插件
-    plugins: [
-        //new ExtractTextPlugin('app.css')
-    ],
+    plugins: [],
 
     //其它解决方案
     resolve: {
         //查找时的文件后序名
-        extensions: ['', '.sass', '.scss'],
+        extensions: ['', '.js', '.json'],
         //包引用别名定义
         alias: {
             _configUrl: path.resolve(__dirname, './build/_config.json')

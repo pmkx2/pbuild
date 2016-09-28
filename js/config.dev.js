@@ -20,20 +20,20 @@ require.config({
 "bootstrap":"jquery"
 },
 		    "hash": {
-"tpl/tpltest":"439aac",
+"tpl/tpltest":"620c33",
 "jstest/data":"bd9999",
 "jstest/idc":"8d6724",
-"jstest/packageon":"384a49",
 "jstest2/data":"bd9999",
+"jstest/packageon":"384a49",
 "jstest2/idc":"a61ed7",
 "jstest2/packageon":"8dc33e",
 "bootstrap":"4becdc",
-"require/og":"061368",
 "jquery/2.1.4":"b0dc11",
+"require/og":"061368",
 "jquery/1.8.3":"3576a6",
 "require":"9b4838",
-"jquery":"c07f22",
-"rivets":"0341cd"
+"rivets":"0341cd",
+"jquery":"c07f22"
 },
 		    "packages": []
 		});

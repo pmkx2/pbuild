@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "js": "webpack --config ./build/js.js --display-error-details",
+    "js-p": "webpack --config ./build/js.js --display-error-details -p",
     "sass": "webpack --config ./build/sass.js --display-error-details"
   },
   "author": "pmkx2 <185832959@qq.com>",

@@ -5,15 +5,19 @@
 	<title>test</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css"  href="../style/vendor/sui/s-ui.min.css?v20160913"/>
+	<link rel="stylesheet" type="text/css"  href="../style/css/lessTest/style.css?v20160913"/>
 </head>
 <body>
-
-<script src="../js/vendor/require/require.js"></script>
-<script src="../js/config.dev.js"></script>
-<script>
-require(['jquery'], function($){
-
-});
-</script>
+	<div id="Box1"></div>
+	
+	<script src="../js/vendor/require/require.js"></script>
+	<script src="../js/config.dev.js"></script>
+	<script>
+	require(['jquery','tpl/tpltest'], function($, tpl){
+		var testHtml = tpl['test.html'];
+		$('#Box1').html(testHtml);
+	});
+	</script>
 </body>
 </html>
