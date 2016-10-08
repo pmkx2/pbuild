@@ -5,7 +5,7 @@
 * IdcTool
 */
 
-define('idc/idcTool', ['jquery'], function($){
+define('jstest/idc', ['jquery'], function($){
 	/** 
 	* @api {Require 引入路径} 'idc/idcTool' IdcTool
 	* @apiGroup IdcTool

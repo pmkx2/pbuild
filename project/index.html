@@ -10,13 +10,14 @@
 </head>
 <body>
 	<div id="Box1"></div>
-	
+
 	<script src="../js/vendor/require/require.js"></script>
 	<script src="../js/config.dev.js"></script>
 	<script>
-	require(['jquery','tpl/tpltest'], function($, tpl){
+	require(['jquery','tpl/tpltest','jstest/idc'], function($, tpl, idc){
 		var testHtml = tpl['test.html'];
 		$('#Box1').html(testHtml);
+		console.log(idc.fnDate().getAllDate());
 	});
 	</script>
 </body>
