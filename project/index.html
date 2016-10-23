@@ -5,15 +5,44 @@
 	<title>test</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css"  href="../style/vendor/sui/s-ui.min.css?v20160913"/>
+	<link rel="stylesheet" type="text/css"  href="../style/css/lessTest/style.css?v20160913"/>
 </head>
 <body>
+	<div id="Box1"></div>
 
-<script src="../js/vendor/require/require.js"></script>
-<script src="../js/config.dev.js"></script>
-<script>
-require(['jquery'], function($){
+	<script src="../js/vendor/require/require.js"></script>
+	<script src="../js/config.dev.js"></script>
+	<script>
+	require(['jquery','tpl/tpltest','jstest/idc'], function($, tpl, idc){
+		var testHtml = tpl['test.html'];
+		$('#Box1').html(testHtml);
+		console.log(idc.fnDate().getAllDate());
 
-});
-</script>
+		var av = [1,2,3,4,5,6,7];
+		var bv = [1,3,5];
+		for(var i=0; i<av.length; i++){
+			for(var i2=0; i2<bv.length; i2++){
+				if(av[i] == bv[i2]){
+					av.splice(i,1);
+				}
+			}
+		}
+		console.log(av);
+
+
+		var cv = [1,2,3,4,5,6,7];
+		var dv = [5,1,3];
+		cv.map(function(v,i){
+			dv.map(function(v2,i2){
+				if(v == v2){
+					cv.splice(i,1);
+				}
+			});
+		});
+		console.log(cv);
+
+	});
+	</script>
 </body>
 </html>
