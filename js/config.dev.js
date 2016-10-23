@@ -29,11 +29,11 @@ require.config({
 "jstest2/packageon":"176149",
 "bootstrap":"4becdc",
 "jquery/1.8.3":"3576a6",
-"jquery/2.1.4":"b0dc11",
-"require/og":"e1484b",
 "jquery":"c07f22",
-"rivets":"0341cd",
-"require":"9b4838"
+"require/og":"e1484b",
+"require":"9b4838",
+"jquery/2.1.4":"b0dc11",
+"rivets":"0341cd"
 },
 		    "packages": []
 		});
